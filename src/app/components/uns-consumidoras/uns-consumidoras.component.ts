@@ -19,17 +19,16 @@ export class UnsConsumidorasComponent implements OnInit {
     this.unidadesService.listarUnidades()
     .subscribe(e => {
       this.unidades = e
-      console.log(e)
     })
   }
 
   informacao(u: any) {
     this.router.navigate([`/unidades/${u.id}/informacao`])
-    console.log(u)
   }
 
   excluirUnidade(u: any) {
-    console.log(u)
+    this.unidadesService.excluirUnidades(u)
+    .subscribe(() => this.ngOnInit())
   }
 
 }

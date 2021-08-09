@@ -32,12 +32,18 @@
             text-transform: uppercase;
         }
 
-        tr {
-            cursor: pointer;
-            
+        tr {            
             .btn-excluir {
                 border-radius: 50%;
                 background-color: #E74B4B;
+                color: white;
+                cursor: pointer;
+            }
+
+            .btn-editar {
+                border-radius: 6px;
+                margin-right: 10px;
+                background-color: #a8a9b1;
                 color: white;
                 cursor: pointer;
             }

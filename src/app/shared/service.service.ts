@@ -13,5 +13,13 @@ export class ServiceService {
   listarUnidades(): Observable<any> {
     return this._http.get<any>(`${environment.baseURL}/unidadeConsumidora`)
   }
+
+  criarUnidades(u: any): Observable<any> {
+    return this._http.post<any>(`${environment.baseURL}/unidadeConsumidora`, u)
+  }
+
+  excluirUnidades(u: any): Observable<any> {
+    return this._http.delete<any>(`${environment.baseURL}/unidadeConsumidora/${u.id}`)
+  }
   
 }

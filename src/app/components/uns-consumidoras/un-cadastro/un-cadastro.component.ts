@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ServiceService } from 'src/app/shared/service.service';
 
 @Component({
   selector: 'app-un-cadastro',
@@ -15,10 +17,25 @@ export class UnCadastroComponent {
     endereco: new FormControl('', Validators.required)
   })
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private unidadeService: ServiceService
+    ) { }
 
   salvarUnidade() {
-    console.log(this.unidadeForm.value)
+    if(this.unidadeForm.valid) {
+      this.unidadeService.criarUnidades(this.unidadeForm.value)
+      .subscribe(
+        ()=> {},
+        (error) => { console.log(error) },
+        () => {this.router.navigate(['/unidades'])
+        }
+      )
+    }
+  }
+
+  cancelarCadastro() {
+    this.router.navigate(['/unidades'])
   }
 
 }

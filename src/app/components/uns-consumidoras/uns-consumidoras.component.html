@@ -25,14 +25,17 @@
             <tbody>
                 <tr 
                     *ngFor="let u of unidades; let i = index" 
-                    (click)="informacao(u)">
+                    >
 
                     <td>{{u.id}}</td>
                     <td>{{u.nome}}</td>
                     <td>{{u.numero}}</td>
-                    <td>{{u.distribuidora}}</td>
+                    <td>{{u.distribuidora | uppercase}}</td>
                     <td>{{u.endereco | titlecase}}</td>
                     <td class="acoes">
+                        <button class="btn-editar" (click)="informacao(u)">
+                            Editar
+                        </button>
                         <button class="btn-excluir" (click)="excluirUnidade(u)">
                             X
                         </button>
