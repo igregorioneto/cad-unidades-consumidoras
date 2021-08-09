@@ -1,0 +1,22 @@
+<div class="cadastro">
+
+    <h3>UNIDADES CONSUMIDORAS - CADASTRO</h3>
+
+    <form [formGroup]="unidadeForm">
+        <input id="" placeholder="Nome" formControlName="nome">
+        <input id="" placeholder="Número" formControlName="numero">
+        <input id="" placeholder="Distribuidora" formControlName="distribuidora">
+        <input id="" placeholder="Endereço" formControlName="endereco">
+    </form>
+
+    <div class="acoes">
+        <button (click)="salvarUnidade()">
+            Cadastrar
+        </button>
+
+        <button>
+            Cancelar
+        </button>
+    </div>
+
+</div>

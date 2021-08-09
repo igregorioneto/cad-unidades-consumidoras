@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/shared/service.service';
 
 @Component({
@@ -8,13 +9,27 @@ import { ServiceService } from 'src/app/shared/service.service';
 })
 export class UnsConsumidorasComponent implements OnInit {
 
-  constructor(private unidadesService: ServiceService) { }
+  unidades: any[] = []
+
+  constructor(
+    private unidadesService: ServiceService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.unidadesService.listarUnidades()
     .subscribe(e => {
+      this.unidades = e
       console.log(e)
     })
+  }
+
+  informacao(u: any) {
+    this.router.navigate([`/unidades/${u.id}/informacao`])
+    console.log(u)
+  }
+
+  excluirUnidade(u: any) {
+    console.log(u)
   }
 
 }
