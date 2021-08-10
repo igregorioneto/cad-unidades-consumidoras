@@ -15,4 +15,12 @@ export class FaturaServiceService {
     return this._http.post<any>(`${this.baseURL}/fatura`,fat)
   }
 
+  listagemFaturasDaUnidade(): Observable<any> {
+    return this._http.get<any>(`${this.baseURL}/fatura`)
+  } 
+
+  excluirFaturaDaUnidade(id: number): Observable<any> {
+    return this._http.delete<any>(`${this.baseURL}/fatura/${id}`)
+  }
+
 }

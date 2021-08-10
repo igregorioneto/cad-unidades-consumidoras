@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { throwError } from 'rxjs';
+import { FaturaServiceService } from 'src/app/shared/fatura-service.service';
 import { ServiceService } from 'src/app/shared/service.service';
 
 @Component({
@@ -15,11 +16,13 @@ export class UnInformacaoComponent implements OnInit {
   numero: string = ''
   distribuidora: string = ''
   endereco: string = ''
+
   faturas: any[] = []
 
   constructor(
     private routeAtiva: ActivatedRoute,
     private unidadeService: ServiceService,
+    private faturaService: FaturaServiceService
     ) {}
 
   ngOnInit(): void {
@@ -28,7 +31,6 @@ export class UnInformacaoComponent implements OnInit {
     this.routeAtiva.params.subscribe(param => id = Number(param.id))
 
     this.gerandoInformacoesDaUnidade(id)
-    
   }
 
   gerandoInformacoesDaUnidade(id: number) {
@@ -40,9 +42,32 @@ export class UnInformacaoComponent implements OnInit {
       this.distribuidora = u[0].distribuidora
       this.endereco = u[0].endereco
 
-      this.faturas = u[0].faturas
+      this.listagemDasFaturasDaUnidade(this.id)
     })
 
   }
+
+  listagemDasFaturasDaUnidade(id: number) {
+    let fatura: any[] = []
+
+    this.faturaService.listagemFaturasDaUnidade()
+    .subscribe( fat => {
+
+      fatura = fat
+      let retorno = fatura.filter(e => e.unidadeConsumidoraId == id)
+      this.faturas = retorno
+
+    })
+
+  }
+
+  deletarFatura(fat: any) {
+    this.faturaService.excluirFaturaDaUnidade(fat.id).subscribe(() => { this.ngOnInit() })
+  }
+
+  // Caso em vez da condição dentro do filter usar este método
+  // filtrandoListagemDasFaturas(e: any, id: number): any {
+  //   if(e.unidadeConsumidoraId == id){return e}
+  // }
 
 }
