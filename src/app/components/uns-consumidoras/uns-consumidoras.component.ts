@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/shared/service.service';
 
@@ -23,7 +23,6 @@ export class UnsConsumidorasComponent implements OnInit {
   }
 
   informacao(u: any) {
-    console.log(u)
     this.router.navigate([`/unidades/${u.id}/informacao`])
   }
 

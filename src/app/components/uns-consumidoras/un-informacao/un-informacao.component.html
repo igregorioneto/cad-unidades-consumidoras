@@ -2,10 +2,10 @@
 
     <div class="title">
 
-        <h3>UNIDADE CONSUMIDORA - N° 132131312</h3>
+        <h3>UNIDADE CONSUMIDORA - N° {{numero}}</h3>
 
         <button class="btn-cadastrar-fat"
-            routerLink="unidades/:id/informacao/fatura_cadastro">
+            routerLink="/unidades/{{id}}/informacao/fatura_cadastro">
             Cadastrar FAT
         </button>
 
@@ -13,10 +13,10 @@
 
     <div class="dados-unidade">
 
-        <span>Nome: </span>
-        <span>Número: 132131312</span>
-        <span>Distribuidora: Light</span>
-        <span>Endereço: Quadra 205, RJ</span>
+        <span>Nome: {{nome | titlecase}}</span>
+        <span>Número: {{numero}}</span>
+        <span>Distribuidora: {{distribuidora | uppercase}}</span>
+        <span>Endereço: {{endereco |titlecase}}</span>
 
     </div>
 
@@ -33,12 +33,12 @@
             </thead>
 
             <tbody>
-                <tr>
+                <tr *ngFor="let f of faturas; let i = index">
 
-                    <td>id</td>
-                    <td>data de vencimento</td>
-                    <td>consumo</td>
-                    <td>valor</td>
+                    <td>{{f.id}}</td>
+                    <td>{{f.data_de_vencimento}}</td>
+                    <td>{{f.consumo | currency}}</td>
+                    <td>{{f.valor | currency}}</td>
                     <td class="acoes">
                         <button class="btn-excluir">
                             X

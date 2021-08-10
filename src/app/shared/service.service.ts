@@ -37,6 +37,14 @@ export class ServiceService {
     )
   }
 
+  informacaoUnidadeId(id: number): Observable<any> {
+    const url = this.baseURL
+
+    return this._http.get<any>(`${url}/unidadeConsumidora/${id}`).pipe(
+      catchError(this.handleError)
+    )
+  }
+
   private handleError(error: any): Observable<any> {
     return throwError(error)
   }
