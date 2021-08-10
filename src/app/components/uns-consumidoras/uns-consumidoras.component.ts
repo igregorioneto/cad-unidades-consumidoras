@@ -23,6 +23,7 @@ export class UnsConsumidorasComponent implements OnInit {
   }
 
   informacao(u: any) {
+    console.log(u)
     this.router.navigate([`/unidades/${u.id}/informacao`])
   }
 

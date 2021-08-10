@@ -35,17 +35,33 @@
         tr {            
             .btn-excluir {
                 border-radius: 50%;
-                background-color: #E74B4B;
-                color: white;
+                background-color: #ff8e8e;
+                color: black;
                 cursor: pointer;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: #f31313;
+                    font-weight: bold;
+                    color: white;
+                }
             }
 
             .btn-editar {
                 border-radius: 6px;
                 margin-right: 10px;
-                background-color: #a8a9b1;
-                color: white;
+                background-color: #fdfdff;
+                color: black;
                 cursor: pointer;
+                font-weight: bold;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: #7c7d83;
+                    font-weight: bold;
+                    color: white;
+                }
             }
 
             td {

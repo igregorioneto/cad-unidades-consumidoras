@@ -1,25 +1,44 @@
-import { environment } from './../../environments/environment.prod';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+
+import { map, catchError } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
 
+  private baseURL: string = "https://api.dev.grupogera.com/processo-seletivo"
+
   constructor(private _http: HttpClient) { }
 
   listarUnidades(): Observable<any> {
-    return this._http.get<any>(`${environment.baseURL}/unidadeConsumidora`)
+    const url = this.baseURL
+
+    return this._http.get<any>(`${url}/unidadeConsumidora`).pipe(
+      catchError(this.handleError)
+    )
   }
 
   criarUnidades(u: any): Observable<any> {
-    return this._http.post<any>(`${environment.baseURL}/unidadeConsumidora`, u)
+    const url = this.baseURL
+
+    return this._http.post<any>(`${url}/unidadeConsumidora`, u).pipe(
+      catchError(this.handleError)
+    )
   }
 
   excluirUnidades(u: any): Observable<any> {
-    return this._http.delete<any>(`${environment.baseURL}/unidadeConsumidora/${u.id}`)
+    const url = this.baseURL
+
+    return this._http.delete<any>(`${url}/unidadeConsumidora/${u.id}`).pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  private handleError(error: any): Observable<any> {
+    return throwError(error)
   }
   
 }

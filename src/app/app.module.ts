@@ -11,6 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UnsConsumidorasComponent } from './components/uns-consumidoras/uns-consumidoras.component';
 import { UnCadastroComponent } from './components/uns-consumidoras/un-cadastro/un-cadastro.component';
 import { UnInformacaoComponent } from './components/uns-consumidoras/un-informacao/un-informacao.component';
+import { FatCadastroComponent } from './components/fat-cadastro/fat-cadastro.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { UnInformacaoComponent } from './components/uns-consumidoras/un-informac
     UnsConsumidorasComponent,
     UnCadastroComponent,
     UnInformacaoComponent,
+    FatCadastroComponent,
   ],
   imports: [
     BrowserModule,

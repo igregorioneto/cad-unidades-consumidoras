@@ -1,1 +1,54 @@
-<p>un-informacao works!</p>
+<div class="informacao">
+
+    <div class="title">
+
+        <h3>UNIDADE CONSUMIDORA - N° 132131312</h3>
+
+        <button class="btn-cadastrar-fat"
+            routerLink="unidades/:id/informacao/fatura_cadastro">
+            Cadastrar FAT
+        </button>
+
+    </div>
+
+    <div class="dados-unidade">
+
+        <span>Nome: </span>
+        <span>Número: 132131312</span>
+        <span>Distribuidora: Light</span>
+        <span>Endereço: Quadra 205, RJ</span>
+
+    </div>
+
+    <div class="tab-unidades">
+        <h3>Faturas</h3>
+
+        <table>
+            <thead>
+                <th>#</th>
+                <th>Data de vencimento</th>
+                <th>Consumo R$</th>
+                <th>Valor R$</th>
+                <th>Ações</th>
+            </thead>
+
+            <tbody>
+                <tr>
+
+                    <td>id</td>
+                    <td>data de vencimento</td>
+                    <td>consumo</td>
+                    <td>valor</td>
+                    <td class="acoes">
+                        <button class="btn-excluir">
+                            X
+                        </button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
