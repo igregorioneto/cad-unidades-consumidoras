@@ -29,6 +29,14 @@ export class ServiceService {
     )
   }
 
+  alterarUnidades(u: any, id: number): Observable<any> {
+    const url = this.baseURL
+
+    return this._http.put<any>(`${url}/unidadeConsumidora/${id}`, u).pipe(
+      catchError(this.handleError)
+    )
+  }
+
   excluirUnidades(u: any): Observable<any> {
     const url = this.baseURL
 

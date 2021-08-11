@@ -26,6 +26,10 @@ export class UnsConsumidorasComponent implements OnInit {
     this.router.navigate([`/unidades/${u.id}/informacao`])
   }
 
+  editarUnidade(u: any) {
+    this.router.navigate([`/unidades/alterar/${u.id}`])
+  }
+
   excluirUnidade(u: any) {
     this.unidadesService.excluirUnidades(u)
     .subscribe(() => this.ngOnInit())

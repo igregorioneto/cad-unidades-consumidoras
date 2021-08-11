@@ -1,6 +1,6 @@
 <div class="cadastro">
 
-    <h3>UNIDADES CONSUMIDORAS - CADASTRO</h3>
+    <h3>UNIDADES CONSUMIDORAS - {{title}}</h3>
 
     <form [formGroup]="unidadeForm">
         <input id="" placeholder="Nome" formControlName="nome">
@@ -11,7 +11,7 @@
 
     <div class="acoes">
         <button class="btn-cadastrar" (click)="salvarUnidade()">
-            Cadastrar
+            {{button}}
         </button>
 
         <button class="btn-cancelar" (click)="cancelarCadastro()">

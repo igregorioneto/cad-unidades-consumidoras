@@ -21,6 +21,10 @@ const routes: Routes = [
     component: UnCadastroComponent 
   },
   { 
+    path:'unidades/alterar/:id', 
+    component: UnCadastroComponent 
+  },
+  { 
     path:'unidades/:id/informacao', 
     component: UnInformacaoComponent 
   },
