@@ -32,6 +32,10 @@ const routes: Routes = [
     path:'unidades/:id/informacao/fatura_cadastro', 
     component: FatCadastroComponent
   },
+  { 
+    path:'unidades/:id/informacao/fatura_alteracao/:id',
+    component: FatCadastroComponent
+  },
   {
     path: '**',
     redirectTo: 'home',

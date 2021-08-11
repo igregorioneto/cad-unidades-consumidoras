@@ -40,6 +40,9 @@
                     <td>{{f.consumo | currency}}</td>
                     <td>{{f.valor | currency}}</td>
                     <td class="acoes">
+                        <button class="btn-editar" (click)="editarFatura(f)">
+                            Editar
+                        </button>
                         <button class="btn-excluir" (click)="deletarFatura(f)">
                             X
                         </button>

@@ -19,6 +19,14 @@ export class FaturaServiceService {
     return this._http.get<any>(`${this.baseURL}/fatura`)
   } 
 
+  informacaoFaturaId(id: number): Observable<any> {
+    return this._http.get<any>(`${this.baseURL}/fatura/${id}`)
+  }
+
+  alterarFaturaDaUnidade(fat: any,id: number): Observable<any> {
+    return this._http.put<any>(`${this.baseURL}/fatura/${id}`, fat)
+  }
+
   excluirFaturaDaUnidade(id: number): Observable<any> {
     return this._http.delete<any>(`${this.baseURL}/fatura/${id}`)
   }

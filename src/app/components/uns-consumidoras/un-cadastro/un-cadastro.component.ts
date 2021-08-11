@@ -65,14 +65,10 @@ export class UnCadastroComponent implements OnInit{
     this.router.navigate(['/unidades'])
   }
 
-  verificaSeExisteId(id: number): boolean {
-    return id ? true : false
-  }
-
   verificarSeAlteraOuCadastra(id: number) {
     id ? (this.title = 'ALTERAR',this.button = 'Alterar') : (this.title = 'CADASTRO',this.button = 'Cadastrar')
 
-    if(this.verificaSeExisteId(id)) {
+    if(id) {
       this.unidadeService.informacaoUnidadeId(id).subscribe(u => {
 
         this.unidadeForm.get('nome')?.setValue(`${u[0].nome}`)

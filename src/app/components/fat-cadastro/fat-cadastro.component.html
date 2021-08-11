@@ -1,6 +1,6 @@
 <div class="fat-cadastro">
 
-    <h3>UNIDADES CONSUMIDORAS - FATURA - CADASTRO</h3>
+    <h3>UNIDADES CONSUMIDORAS - FATURA - {{title}}</h3>
 
     <form [formGroup]="fatform">
         <input id="" placeholder="Data de vencimento ex. 01/01/2021" formControlName="data_de_vencimento">
@@ -9,8 +9,8 @@
     </form>
 
     <div class="acoes">
-        <button class="btn-cadastrar" (click)="cadastrarFaturaUnidade()">
-            Cadastrar
+        <button class="btn-cadastrar" (click)="salvarFaturaUnidade()">
+            {{button}}
         </button>
 
         <button class="btn-cancelar" (click)="cancelarCadastroFatura()">
