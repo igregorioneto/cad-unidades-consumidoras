@@ -23,10 +23,14 @@
                 <th>UN. CONSUMIDORA</th>
                 <th>NÚMERO</th>
             </tr>
-            <tr class="un-informacao">
-                <td>1</td>
-                <td>Unidade 1</td>
-                <td>123312123</td>
+            <tr class="un-informacao" 
+                *ngFor="let u of unidades; let i = index"
+                (click)="informacaoUnidade(u)">
+
+                <td>{{u.id}}</td>
+                <td>{{u.nome}}</td>
+                <td>{{u.numero}}</td>
+
             </tr>
         </table>
     </div>
