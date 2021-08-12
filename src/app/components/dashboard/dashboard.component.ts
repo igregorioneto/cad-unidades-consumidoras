@@ -14,11 +14,12 @@ export class DashboardComponent implements OnInit {
   @ViewChild("grafico", { static: true }) elemento!: ElementRef
 
   unidades: any[] = []
-  valores: any[] = []
 
   totalDeUnidades: number = 0
   totalDeFaturas: number = 0
+
   consumoTotal: number = 0
+  valorTotal: number = 0
   
   constructor(
     private unidadeService: ServiceService,
@@ -31,33 +32,12 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     
-    let unidade: any[]
+    this.informacoesDasUnidades()
+    this.informacoesDasFaturas()
 
-    this.unidadeService.listarUnidades()
-    .subscribe(u => {
-
-      unidade = u.sort((a:any, b:any) => b.id - a.id)
-      this.unidades = unidade.slice(0,5)
-
-      this.totalDeUnidades = u.length
-      this.valores.push(u.length)
-
-    })
-
-    this.faturaService.listagemFaturasDaUnidade()
-    .subscribe(f => {
-
-      this.valorFaturasTotal(f)
-
-      this.consumoTotal = f.reduce(this.consumoTotalSoma, 0)
-      this.valores.push(f.length)
-    })
-    
-    
-    this.greficoPizza(this.valores)
   }
 
-  informacaoUnidade(u: any) {
+  informacaoUnidade(u: any): void  {
     this.router.navigate([`/unidades/${u.id}/informacao`])
   }
 
@@ -65,15 +45,54 @@ export class DashboardComponent implements OnInit {
     return total + item.consumo
   }
 
-  greficoPizza(...valores: any) {
-    console.log(valores[0])
+  valorTotalSoma(total: number, item: any): number {
+    return total + item.valor
+  }
+
+  valorFaturasTotal(f: any): number {
+    return this.totalDeFaturas = f.length
+  }
+
+  classificarUnidadesDesc(a:any, b:any): number {
+    return b.id - a.id
+  }
+
+  informacoesDasUnidades(): void {
+    let unidade: any[]
+
+    this.unidadeService.listarUnidades()
+    .subscribe(u => {
+
+      unidade = u.sort(this.classificarUnidadesDesc)
+      this.unidades = unidade.slice(0,5)
+
+      this.totalDeUnidades = u.length
+    })
+  }
+
+  informacoesDasFaturas(): void {
+    this.faturaService.listagemFaturasDaUnidade()
+    .subscribe(f => {
+
+      this.valorFaturasTotal(f)
+
+      this.consumoTotal = f.reduce(this.consumoTotalSoma, 0)
+      this.valorTotal = f.reduce(this.valorTotalSoma, 0)
+
+      this.greficoPizza(this.valorTotal, this.consumoTotal)
+
+    })
+  }
+
+  greficoPizza(valor: number, consumo: number): void  {
+    
     new Chart(this.elemento.nativeElement, {
       type: 'pie',
       data: {
-        labels: ['UNIDADES CONSUMIDORAS', 'FATURAS'],
+        labels: ['VALOR TOTAL', 'CONSUMO TOTAL',],
         datasets: [
           {
-            data: [2,6],
+            data: [valor,consumo],
             backgroundColor: ['#E74B4B','#C4C4C4']
           }
         ]
@@ -81,9 +100,5 @@ export class DashboardComponent implements OnInit {
     })
 
   }
-
-  valorFaturasTotal(f: any): number {
-    return this.totalDeFaturas = f.length
-  }
-
+  
 }

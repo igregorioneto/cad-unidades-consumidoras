@@ -20,6 +20,12 @@
             line-height: 23px;
             margin-right: 150px;
             cursor: pointer;
+
+            &:hover {
+                font-weight: bold;
+                height: +55px;
+                width: +160px;
+            }
         }
 
     }
