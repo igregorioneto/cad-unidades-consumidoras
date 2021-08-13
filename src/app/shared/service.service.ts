@@ -1,3 +1,4 @@
+import { Unidade } from './interface/unidade';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
@@ -37,10 +38,10 @@ export class ServiceService {
     )
   }
 
-  excluirUnidades(u: any): Observable<any> {
+  excluirUnidades(id: number): Observable<Unidade> {
     const url = this.baseURL
-
-    return this._http.delete<any>(`${url}/unidadeConsumidora/${u.id}`).pipe(
+    console.log(id)
+    return this._http.delete<Unidade>(`${url}/unidadeConsumidora/${id}`).pipe(
       catchError(this.handleError)
     )
   }

@@ -32,7 +32,7 @@ export class UnsConsumidorasComponent implements OnInit {
   }
 
   excluirUnidade(u: Unidade) {
-    this.unidadesService.excluirUnidades(u)
+    this.unidadesService.excluirUnidades(Number(u.id))
     .subscribe(() => this.ngOnInit())
   }
 
