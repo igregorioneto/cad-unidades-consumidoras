@@ -1,4 +1,4 @@
-# CadUnidadesConsumidoras
+# Sistema para cadastro de Unidades e suas Faturas com Dashboard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
