@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   menuOpen: boolean = false
-
+  // Configuração do menu hamburguer
   mobileMenu() {
     const menuBtn = document.querySelector('.menu-btn')
     const buttonMenu = document.querySelector('.menu-n')
