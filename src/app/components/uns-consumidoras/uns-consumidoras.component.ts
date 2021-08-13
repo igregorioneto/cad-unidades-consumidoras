@@ -19,7 +19,6 @@ export class UnsConsumidorasComponent implements OnInit {
   ngOnInit(): void {
     this.unidadesService.listarUnidades()
     .subscribe(e => {
-      console.log(e)
       this.unidades = e
     })
   }

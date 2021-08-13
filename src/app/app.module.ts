@@ -12,6 +12,7 @@ import { UnsConsumidorasComponent } from './components/uns-consumidoras/uns-cons
 import { UnCadastroComponent } from './components/uns-consumidoras/un-cadastro/un-cadastro.component';
 import { UnInformacaoComponent } from './components/uns-consumidoras/un-informacao/un-informacao.component';
 import { FatCadastroComponent } from './components/fat-cadastro/fat-cadastro.component';
+import { Error404Component } from './components/error404/error404.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { FatCadastroComponent } from './components/fat-cadastro/fat-cadastro.com
     UnCadastroComponent,
     UnInformacaoComponent,
     FatCadastroComponent,
+    Error404Component,
   ],
   imports: [
     BrowserModule,

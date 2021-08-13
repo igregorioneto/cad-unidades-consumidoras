@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { Error404Component } from './components/error404/error404.component';
 import { FatCadastroComponent } from './components/fat-cadastro/fat-cadastro.component';
 import { UnCadastroComponent } from './components/uns-consumidoras/un-cadastro/un-cadastro.component';
 import { UnInformacaoComponent } from './components/uns-consumidoras/un-informacao/un-informacao.component';
@@ -38,8 +39,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    component: Error404Component
   },
 ];
 

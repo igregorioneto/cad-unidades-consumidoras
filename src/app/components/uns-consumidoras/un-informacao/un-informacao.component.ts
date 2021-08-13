@@ -39,14 +39,15 @@ export class UnInformacaoComponent implements OnInit {
   }
 
   gerandoInformacoesDaUnidade(id: number) {
-
+    
     this.unidadeService.informacaoUnidadeId(id).subscribe(u => {
-      this.id = u[0].id
-      this.nome = u[0].nome
-      this.numero = u[0].numero
-      this.distribuidora = u[0].distribuidora
-      this.endereco = u[0].endereco
-
+      
+      this.id = u.id
+      this.nome = u.nome
+      this.numero = u.numero
+      this.distribuidora = u.distribuidora
+      this.endereco = u.endereco
+      
       this.listagemDasFaturasDaUnidade(this.id)
     })
 

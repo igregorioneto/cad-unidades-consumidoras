@@ -17,11 +17,13 @@ export class AppComponent {
       menuBtn?.classList.add('open')
       buttonMenu?.classList.remove('menu-esconder')
       buttonMenu?.classList.add('menu-normal')
+
       this.menuOpen = true
     } else {
       menuBtn?.classList.remove('open')
       buttonMenu?.classList.remove('menu-normal')
       buttonMenu?.classList.add('menu-esconder')
+      
       this.menuOpen = false
     }  
 
