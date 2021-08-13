@@ -1,16 +1,32 @@
 <div class="cadastro">
-
+    
     <h3>UNIDADES CONSUMIDORAS - {{title}}</h3>
 
     <form [formGroup]="unidadeForm">
+        <ng-container *ngIf="unidadeForm.controls.nome.touched">
+            <span *ngIf="unidadeForm.controls.nome.errors?.required">Campo obrigatório!!!</span>
+        </ng-container> 
         <input id="" placeholder="Nome" formControlName="nome">
-        <input id="" placeholder="Número" formControlName="numero">
+
+        <ng-container *ngIf="unidadeForm.controls.numero.touched">
+            <span *ngIf="unidadeForm.controls.numero.errors?.required">Campo obrigatório!!!</span>
+        </ng-container> 
+        <input id="" placeholder="Número" formControlName="numero" type="number">
+
+        <ng-container *ngIf="unidadeForm.controls.distribuidora.touched">
+            <span *ngIf="unidadeForm.controls.distribuidora.errors?.required">Campo obrigatório!!!</span>
+        </ng-container> 
         <input id="" placeholder="Distribuidora" formControlName="distribuidora">
+
+        <ng-container *ngIf="unidadeForm.controls.endereco.touched">
+            <span *ngIf="unidadeForm.controls.endereco.errors?.required">Campo obrigatório!!!</span>
+        </ng-container> 
         <input id="" placeholder="Endereço" formControlName="endereco">
     </form>
 
     <div class="acoes">
-        <button class="btn-cadastrar" (click)="salvarUnidade()">
+        <button class="btn-cadastrar" (click)="salvarUnidade()" 
+            [disabled]="!unidadeForm.valid">
             {{button}}
         </button>
 

@@ -3,13 +3,26 @@
     <h3>UNIDADES CONSUMIDORAS - FATURA - {{title}}</h3>
 
     <form [formGroup]="fatform">
+
+        <ng-container *ngIf="fatform.controls.data_de_vencimento.touched">
+            <span *ngIf="fatform.controls.data_de_vencimento.errors?.required">Campo obrigatório!!!</span>
+        </ng-container>        
         <input id="" placeholder="Data de vencimento ex. 01/01/2021" formControlName="data_de_vencimento">
-        <input id="" placeholder="Consumo $" formControlName="consumo" >
-        <input id="" placeholder="Valor $" formControlName="valor" >
+        
+        <ng-container *ngIf="fatform.controls.consumo.touched">
+            <span *ngIf="fatform.controls.consumo.errors?.required">Campo obrigatório!!!</span>
+        </ng-container>
+        <input id="" placeholder="Consumo $" formControlName="consumo"  type="number">
+
+        <ng-container *ngIf="fatform.controls.valor.touched">
+            <span *ngIf="fatform.controls.valor.errors?.required">Campo obrigatório!!!</span>
+        </ng-container>        
+        <input id="" placeholder="Valor $" formControlName="valor"  type="number">
     </form>
 
     <div class="acoes">
-        <button class="btn-cadastrar" (click)="salvarFaturaUnidade()">
+        <button class="btn-cadastrar" (click)="salvarFaturaUnidade()"
+        [disabled]="!fatform.valid">
             {{button}}
         </button>
 

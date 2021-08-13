@@ -71,10 +71,10 @@ export class UnCadastroComponent implements OnInit{
     if(id) {
       this.unidadeService.informacaoUnidadeId(id).subscribe(u => {
 
-        this.unidadeForm.get('nome')?.setValue(`${u[0].nome}`)
-        this.unidadeForm.get('numero')?.setValue(`${u[0].numero}`)
-        this.unidadeForm.get('distribuidora')?.setValue(`${u[0].distribuidora}`)
-        this.unidadeForm.get('endereco')?.setValue(`${u[0].endereco}`)
+        this.unidadeForm.get('nome')?.setValue(`${u.nome}`)
+        this.unidadeForm.get('numero')?.setValue(`${u.numero}`)
+        this.unidadeForm.get('distribuidora')?.setValue(`${u.distribuidora}`)
+        this.unidadeForm.get('endereco')?.setValue(`${u.endereco}`)
 
       })
     }

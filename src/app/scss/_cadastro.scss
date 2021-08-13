@@ -15,8 +15,13 @@
         box-sizing: border-box;
         border-radius: 3px;
     
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         padding-left: 23px;
+    }
+
+    span {
+        color: rgb(248, 19, 19);
+        padding-bottom: 20px;
     }
     
     .acoes {
@@ -34,6 +39,11 @@
     
         .btn-cadastrar {
             background: #C85E5E;
+
+            &:disabled {
+                background-color: rgb(223, 223, 223);
+                color: rgb(112, 112, 110);
+            }
         }
     
         .btn-cancelar {
@@ -59,8 +69,13 @@
         box-sizing: border-box;
         border-radius: 3px;
     
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         padding-left: 23px;
+    }
+
+    span {
+        color: rgb(248, 19, 19);
+        padding-bottom: 20px;
     }
     
     .acoes {
@@ -78,6 +93,11 @@
     
         .btn-cadastrar {
             background: #C85E5E;
+
+            &:disabled {
+                background-color: rgb(223, 223, 223);
+                color: rgb(112, 112, 110);
+            }
         }
     
         .btn-cancelar {
@@ -103,8 +123,13 @@
         box-sizing: border-box;
         border-radius: 3px;
     
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         padding-left: 23px;
+    }
+
+    span {
+        color: rgb(248, 19, 19);
+        padding-bottom: 20px;
     }
     
     .acoes {
@@ -122,6 +147,11 @@
     
         .btn-cadastrar {
             background: #C85E5E;
+
+            &:disabled {
+                background-color: rgb(223, 223, 223);
+                color: rgb(112, 112, 110);
+            }
         }
     
         .btn-cancelar {
@@ -147,8 +177,13 @@
         box-sizing: border-box;
         border-radius: 3px;
     
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         padding-left: 23px;
+    }
+
+    span {
+        color: rgb(248, 19, 19);
+        padding-bottom: 20px;
     }
     
     .acoes {
@@ -166,6 +201,11 @@
     
         .btn-cadastrar {
             background: #C85E5E;
+
+            &:disabled {
+                background-color: rgb(223, 223, 223);
+                color: rgb(112, 112, 110);
+            }
         }
     
         .btn-cancelar {
