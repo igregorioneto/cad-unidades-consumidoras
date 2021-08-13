@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   @ViewChild("grafico", { static: true }) elemento!: ElementRef
 
   unidades: any[] = []
+  semUnidades: string = 'Sem unidades cadastradas'
 
   totalDeUnidades: number = 0
   totalDeFaturas: number = 0
@@ -85,14 +86,14 @@ export class DashboardComponent implements OnInit {
   }
 
   greficoPizza(valor: number, consumo: number): void  {
-    
+
     new Chart(this.elemento.nativeElement, {
       type: 'pie',
       data: {
         labels: ['VALOR TOTAL', 'CONSUMO TOTAL',],
         datasets: [
           {
-            data: [valor,consumo],
+            data: [valor, consumo],
             backgroundColor: ['#E74B4B','#C4C4C4']
           }
         ]

@@ -12,4 +12,10 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  abrirMenu() {
+    document.getElementById("menu")?.classList.toggle("change")
+    document.getElementById("btn-menu")?.classList.toggle("change")
+    document.getElementById("menu-bg")?.classList.toggle("change-bg")
+  }
+
 }

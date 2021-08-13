@@ -1,7 +1,14 @@
 <div class="principal">
 
   <div class="menu">
-    <app-menu></app-menu>
+
+    <div class="menu-btn" (click)="mobileMenu()">
+      <div class="menu-btn__burger"></div>
+    </div>
+
+    <div class="menu-n menu-esconder">
+      <app-menu></app-menu>
+    </div>
   </div>
   
   <div class="conteudo">

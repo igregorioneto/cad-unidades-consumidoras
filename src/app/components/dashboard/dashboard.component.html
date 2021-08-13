@@ -20,7 +20,7 @@
 
 <section>
 
-    <div class="ultimas-unidades">
+    <div class="ultimas-unidades" *ngIf="unidades.length > 0">
         <table>
             <tr>
                 <th>#</th>
@@ -37,6 +37,10 @@
 
             </tr>
         </table>
+    </div>
+
+    <div class="sem-unidades" *ngIf="unidades.length == 0">
+        {{semUnidades}}
     </div>
 
     <div class="grafico">

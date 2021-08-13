@@ -1,0 +1,85 @@
+.btn {
+
+    .btn-menu {
+
+        @media only screen and (max-device-width: 1880px) {
+            position: absolute;
+            width: 241px;
+            height: 66px;
+            left: 29px;
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            cursor: pointer;
+
+            &:hover {
+                font-size: 22px;
+                height: +75px;
+                box-shadow: 4px 4px 4px rgb(46, 46, 46);
+            }
+        }
+
+        @media only screen and (max-device-width: 1704px) {
+            position: absolute;
+            width: 180px;
+            height: 66px;
+            left: 29px;
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            cursor: pointer;
+
+            &:hover {
+                font-size: 22px;
+                height: +75px;
+                box-shadow: 4px 4px 4px rgb(46, 46, 46);
+            }
+                           
+        }
+
+        @media only screen and (max-device-width: 1650px) {
+            position: absolute;
+            width: 140px;
+            height: 66px;
+            left: 29px;
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            cursor: pointer;
+
+            &:hover {
+                font-size: 22px;
+                height: +75px;
+                box-shadow: 4px 4px 4px rgb(46, 46, 46);
+            }
+                           
+        }
+        
+        @media only screen and (max-device-width: 1400px) {            
+            position: absolute;
+            width: 150px;
+            height: 66px;
+            left: 29px;
+            border-radius: 10px;
+            background-color: #FFFFFF;
+            cursor: pointer;
+            margin-top: -50px;
+            margin-left: -15px;
+
+            transition: 1s;
+
+            &:hover {
+                font-size: 18px;
+                height: +75px;
+                box-shadow: 4px 4px 4px rgb(46, 46, 46);
+            }
+                           
+        }
+        
+    }
+
+    .btn-dashboard {
+        top: 124px;
+    }
+
+    .btn-un-consumidoras {
+        top: 211px;
+    }
+}
