@@ -18,6 +18,7 @@ export class FatCadastroComponent implements OnInit {
 
   fatura: Fatura[] = []
 
+  // formulário de cadastro
   fatform = new FormGroup({
     data_de_vencimento: new FormControl('', Validators.required),
     consumo: new FormControl('', Validators.required),
