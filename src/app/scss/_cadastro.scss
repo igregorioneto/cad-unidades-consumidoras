@@ -1,41 +1,176 @@
-h3 {
-    font-size: 20px;
-    line-height: 23px;
+@media only screen and (min-device-width: 795px) {
+    h3 {
+        font-size: 20px;
+        line-height: 23px;
+    }
+    
+    input {
+        display: block;
+    
+        width: 657px;
+        height: 48px;
+    
+        background: #EAE6E6;
+        border: 1px solid #A28787;
+        box-sizing: border-box;
+        border-radius: 3px;
+    
+        margin-bottom: 20px;
+        padding-left: 23px;
+    }
+    
+    .acoes {
+    
+        button {
+            margin-right: 34px;
+            width: 156px;
+            height: 47px;
+            border-radius: 6px;
+            cursor: pointer;
+    
+            color: white;
+            font-size: 18px;
+        }
+    
+        .btn-cadastrar {
+            background: #C85E5E;
+        }
+    
+        .btn-cancelar {
+            background: #C4C4C4;
+        }
+    }
 }
 
-input {
-    display: block;
-
-    width: 657px;
-    height: 48px;
-
-    background: #EAE6E6;
-    border: 1px solid #A28787;
-    box-sizing: border-box;
-    border-radius: 3px;
-
-    margin-bottom: 20px;
-    padding-left: 23px;
-}
-
-.acoes {
-
-    button {
-        margin-right: 34px;
-        width: 156px;
-        height: 47px;
-        border-radius: 6px;
-        cursor: pointer;
-
-        color: white;
+@media only screen and (max-device-width: 794px) {
+    h3 {
         font-size: 18px;
+        line-height: 23px;
     }
-
-    .btn-cadastrar {
-        background: #C85E5E;
+    
+    input {
+        display: block;
+    
+        width: 350px;
+        height: 48px;
+    
+        background: #EAE6E6;
+        border: 1px solid #A28787;
+        box-sizing: border-box;
+        border-radius: 3px;
+    
+        margin-bottom: 20px;
+        padding-left: 23px;
     }
-
-    .btn-cancelar {
-        background: #C4C4C4;
+    
+    .acoes {
+    
+        button {
+            margin-right: 34px;
+            width: 156px;
+            height: 47px;
+            border-radius: 6px;
+            cursor: pointer;
+    
+            color: white;
+            font-size: 18px;
+        }
+    
+        .btn-cadastrar {
+            background: #C85E5E;
+        }
+    
+        .btn-cancelar {
+            background: #C4C4C4;
+        }
     }
 }
+
+@media only screen and (max-device-width: 500px) {
+    h3 {
+        font-size: 16px;
+        line-height: 23px;
+    }
+    
+    input {
+        display: block;
+    
+        width: 250px;
+        height: 48px;
+    
+        background: #EAE6E6;
+        border: 1px solid #A28787;
+        box-sizing: border-box;
+        border-radius: 3px;
+    
+        margin-bottom: 20px;
+        padding-left: 23px;
+    }
+    
+    .acoes {
+    
+        button {
+            margin-right: 10px;
+            width: 120px;
+            height: 27px;
+            border-radius: 6px;
+            cursor: pointer;
+    
+            color: white;
+            font-size: 18px;
+        }
+    
+        .btn-cadastrar {
+            background: #C85E5E;
+        }
+    
+        .btn-cancelar {
+            background: #C4C4C4;
+        }
+    }
+}
+
+@media only screen and (max-device-width: 400px) {
+    h3 {
+        font-size: 16px;
+        line-height: 23px;
+    }
+    
+    input {
+        display: block;
+    
+        width: 200px;
+        height: 38px;
+    
+        background: #EAE6E6;
+        border: 1px solid #A28787;
+        box-sizing: border-box;
+        border-radius: 3px;
+    
+        margin-bottom: 20px;
+        padding-left: 23px;
+    }
+    
+    .acoes {
+    
+        button {
+            margin-right: 10px;
+            width: 120px;
+            height: 27px;
+            border-radius: 6px;
+            cursor: pointer;
+    
+            color: white;
+            font-size: 18px;
+        }
+    
+        .btn-cadastrar {
+            background: #C85E5E;
+        }
+    
+        .btn-cancelar {
+            background: #C4C4C4;
+        }
+    }
+}
+
