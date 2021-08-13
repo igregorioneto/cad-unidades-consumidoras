@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl,FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, UrlSegment } from '@angular/router';
 import { FaturaServiceService } from 'src/app/shared/fatura-service.service';
+import { Fatura } from 'src/app/shared/interface/fatura';
 
 @Component({
   selector: 'app-fat-cadastro',
@@ -15,7 +16,7 @@ export class FatCadastroComponent implements OnInit {
   idFat: number = 0
   idDaUnidade: number = 0
 
-  fatura: any[] = []
+  fatura: Fatura[] = []
 
   fatform = new FormGroup({
     data_de_vencimento: new FormControl('', Validators.required),

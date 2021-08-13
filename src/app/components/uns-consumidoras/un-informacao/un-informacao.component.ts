@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { throwError } from 'rxjs';
 import { FaturaServiceService } from 'src/app/shared/fatura-service.service';
+import { Fatura } from 'src/app/shared/interface/fatura';
 import { ServiceService } from 'src/app/shared/service.service';
 
 @Component({
@@ -19,7 +20,7 @@ export class UnInformacaoComponent implements OnInit {
   distribuidora: string = ''
   endereco: string = ''
 
-  faturas: any[] = []
+  faturas: Fatura[] = []
 
   constructor(
     private routeAtiva: ActivatedRoute,
@@ -52,7 +53,7 @@ export class UnInformacaoComponent implements OnInit {
   }
 
   listagemDasFaturasDaUnidade(id: number) {
-    let fatura: any[] = []
+    let fatura: Fatura[] = []
 
     this.faturaService.listagemFaturasDaUnidade()
     .subscribe( fat => {
@@ -65,11 +66,11 @@ export class UnInformacaoComponent implements OnInit {
 
   }
 
-  editarFatura(f: any) {
+  editarFatura(f: Fatura) {
     this.router.navigate([`unidades/${this.idUnidade}/informacao/fatura_alteracao/${f.id}`])
   }
 
-  deletarFatura(fat: any) {
+  deletarFatura(fat: Fatura) {
     this.faturaService.excluirFaturaDaUnidade(fat.id).subscribe(() => { this.ngOnInit() })
   }
 
