@@ -11,7 +11,7 @@
 
 <img src="https://img.shields.io/static/v1?label=UnidadesFaturas&message=Greg%C3%B3rioNeto&color=7159c1&style=for-the-badge&logo=ghost">
 
-![Alt Text](https://github.com/igregorioneto/cad-unidades-consumidoras/blob/Unidades/src/assets/icons/simplescreenrecorder-2021-08-13_21.21.16.gif)
+![Cad Unidades-Faturas](https://github.com/igregorioneto/cad-unidades-consumidoras/blob/Unidades/src/assets/icons/simplescreenrecorder-2021-08-13_21.21.16.gif?raw=true)
 
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
@@ -24,7 +24,7 @@ Objetivo:
 </h2>
 
 <p>
-🚀 Sistema para cadastrar, listar, editar e deletar Unidades Consumidoras e Faturas dentro das unidades. Desenvolvi um dashboard simples que é possível verificar alguns pontos importantes de informações. Gráfico pizza, cards e uma tabela com as cinco últimas unidades cadastradas.
+🚀 Sistema para cadastrar, listar, editar e deletar Unidades Consumidoras e Faturas dentro das unidades. Desenvolvi um dashboard simples que é possível verificar alguns pontos importantes de informações. Gráfico pizza, cards e uma tabela com as cinco últimas unidades cadastradas. Desenvolvi no FIGMA antes de desenvolver o projeto de como seria a estrutura. <a href="https://www.figma.com/file/VlFV4S3MLIRy9nV9tWjWd5/Cad-de-Unidades-Consumidoras?node-id=2%3A2">Link do UI/UX no FIGMA.</a>
 </p>
 <p>
 🚀 Este sistema você pode interagir com uma API que esta no <a href="https://api.dev.grupogera.com/processo-seletivo/api-docs/">Swagger</a>.
@@ -40,6 +40,8 @@ Tecnologias:
 <p align="center">
 
 [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+
+[Figma](https://www.figma.com/file/VlFV4S3MLIRy9nV9tWjWd5/Cad-de-Unidades-Consumidoras?node-id=2%3A2)
 
 [SCSS](https://sass-lang.com/)
 
