@@ -1,19 +1,63 @@
-# CadUnidadesConsumidoras
+<h1 align="center">Cad Unidades-Faturas</h1>
+<h1>
+    <a href="https://angular.io/">🔗
+     Angular
+     </a>
+     <a href="https://api.dev.grupogera.com/processo-seletivo/api-docs/"> |
+     API Swagger de unidades consumidoras
+     </a>
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
-## Development server
+<img src="https://img.shields.io/static/v1?label=UnidadesFaturas&message=Greg%C3%B3rioNeto&color=7159c1&style=for-the-badge&logo=ghost">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<h1 align="center">
+  <img alt="UnidadesFaturas" title="#UnidadesFaturas" src="https://i.picasion.com/pic91/b77a291dd272dee86cccbf69d0e60d1a.gif" />
+</h1>
 
-## Code scaffolding
+<p align="center">
+ <a href="#objetivo">Objetivo</a> •
+ <a href="#tecnologias">Tecnologias</a> •
+ <a href="#tecnologias">Como rodar o projeto</a> 
+</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<h2 align="center">
+Objetivo:
+</h2>
 
-## Build
+<p>
+🚀 Sistema para cadastrar, listar, editar e deletar Unidades Consumidoras e Faturas dentro das unidades. Desenvolvi um dashboard simples que é possível verificar alguns pontos importantes de informações. Gráfico pizza, cards e uma tabela com as cinco últimas unidades cadastradas.
+</p>
+<p>
+🚀 Este sistema você pode interagir com uma API que esta no <a href="https://api.dev.grupogera.com/processo-seletivo/api-docs/">Swagger</a>.
+</p>
+<p>
+🚀 Coloquei um menu Hamburger que foi criado com css e javascript, sem a necessidade de biblioteca e a única biblioteca usada foi o <a href="https://www.chartjs.org/">Chartjs</a> que esta sendo usado o gráfico pizza. O resto do código foi feito com <a href="https://sass-lang.com/">SCSS</a>
+</p>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<h2 align="center">
+Tecnologias:
+</h2>
 
-## Running unit tests
+<p align="center">
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+[Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+
+[SCSS](https://sass-lang.com/)
+
+[Swagger](https://api.dev.grupogera.com/processo-seletivo/api-docs/)
+
+[Chartjs](https://www.chartjs.org/)
+
+</p>
+
+
+<h2 align="center">
+Como rodar o projeto:
+</h2>
+
+```
+ng s ou ng server ou ng server --open
+```
+
+<h3>Acessar projeto: </h3> <a href="http://localhost:4200/">Clique aqui!!!</a>
